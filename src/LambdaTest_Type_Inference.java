@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class LambdaTest_Type_Inference {
@@ -20,6 +19,6 @@ public class LambdaTest_Type_Inference {
 	}
 }
 
-interface MyComprator{
+interface MyComprator {
 	boolean compare(int a, int b);
 }

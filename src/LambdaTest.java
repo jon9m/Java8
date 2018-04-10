@@ -15,15 +15,17 @@ public class LambdaTest {
 
 	}
 	
-	public static void printMessage(){
+	public static void printMessage() {
 		System.out.println("Ran...2");
-		
-		Interface1 interface1 = (String name)-> {System.out.println(name);};
-		interface1.method1("aaaaa"); 
-		
-		Runnable interface2 = ()-> {System.out.println("interface 2");};
+
+		Interface1 interface1 = (String name) -> {
+			System.out.println(name);
+		};
+		interface1.method1("aaaaa");
+
+		Runnable interface2 = () -> {
+			System.out.println("interface 2");
+		};
 		new Thread(interface2).start();
 	}
-	
-
 }

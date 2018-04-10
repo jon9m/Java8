@@ -11,14 +11,14 @@ public class ListConsumer {
 		a.add("ccc");
 		a.add("ddd");
 
-//		a.forEach(new MyConsumer());
+		a.forEach(new MyConsumer());
 //		a.forEach((x)-> {System.out.println(x);});
 //		a.forEach(System.out::println);
 		
 		/*Enhanced for loop*/
-		for(String x:a){
+		/*for(String x:a){
 			System.out.println(x);
-		}
+		}*/
 	}
 }
 

@@ -1,11 +1,10 @@
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-
-import javax.swing.plaf.synth.SynthSeparatorUI;
 
 public class MapIterate {
 
@@ -15,18 +14,20 @@ public class MapIterate {
 		map.put(222, new Employee("J", "j", "2"));
 		map.put(333, new Employee("P", "p", "3"));
 
+		System.out.println("---------------Entry Set----------------");
 		Set<Entry<Integer, Employee>> items = map.entrySet();
 		for (Entry<Integer, Employee> item : items) {
 			System.out.println(item.getKey());
 			System.out.println(item.getValue());
 		}
-		System.out.println("-------------------------------");
+		
+		System.out.println("---------------Key Set----------------");
 		Set<Integer> keys = map.keySet();
 		for (Integer key : keys) {
 			System.out.println(map.get(key));
 		}
-		System.out.println("-------------------------------");
-
+		
+		System.out.println("---------------BiConsumer----------------");
 		map.forEach(new BiConsumer<Integer, Employee>() {
 			@Override
 			public void accept(Integer t, Employee u) {
@@ -34,8 +35,14 @@ public class MapIterate {
 				System.out.println(u);
 			}
 		});
+		
 		System.out.println("-------------------------------");
 		map.forEach((k, v)-> System.out.println(k + ":" + v));
+		
+		System.out.println("---------------Values----------------");
+		Collection<Employee> values = map.values();
+		values.forEach((v)-> System.out.println(v));
+		
 	}
 
 }
